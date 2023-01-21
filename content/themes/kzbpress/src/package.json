@@ -1,0 +1,35 @@
+{
+	"name": "kzbpress",
+	"version": "0.0.1",
+	"description": "KZBPress theme by KZBTeam",
+	"main": "index.js",
+	"scripts": {
+		"start": "npm run start:blocks & npm run start:theme",
+		"start:blocks": "wp-scripts start  --webpack-src-dir=blocks/ --webpack-copy-php --output-path=../library/blocks/build",
+		"start:theme": "wp-scripts start  --webpack-src-dir=theme/ --config=theme/webpack.config.js",
+		"build": "npm run build:blocks && npm run build:theme",
+		"build:blocks": "wp-scripts build  --webpack-src-dir=blocks/ --webpack-copy-php --output-path=../library/blocks/build",
+		"build:theme": "wp-scripts build  --webpack-src-dir=theme/ --config=theme/webpack.config.js"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@wordpress/eslint-plugin": "^13.9.0",
+		"@wordpress/i18n": "^4.25.0",
+		"@wordpress/scripts": "^25.2.0",
+		"browser-sync": "^2.27.11",
+		"browser-sync-webpack-plugin": "^2.3.0",
+		"copy-webpack-plugin": "^11.0.0",
+		"webpack-node-externals": "^3.0.0",
+		"gulp": "^4.0.2",
+		"stylelint": "^14.16.1",
+		"stylelint-config-hudochenkov": "^8.0.1",
+		"stylelint-order": "^6.0.1"
+	},
+	"dependencies": {
+		"jquery": "^3.6.3",
+		"lodash": "^4.17.21",
+		"motion-ui": "^2.0.4",
+		"node-sass": "^8.0.0"
+	}
+}

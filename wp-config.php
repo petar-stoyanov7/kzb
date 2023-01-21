@@ -11,15 +11,14 @@ if (file_exists(dirname(__FILE__) . '/wp-config-local.php')) {
     define('DB_USER', 'name_goes_here');
     define('DB_PASSWORD', 'super_secret_pass');
     define('DB_HOST', 'page_hostname');
-    define('DB_CHARSET', 'utf8');
-    define('DB_COLLATE', '');
-    define('WP_DEBUG', true);
 
     define('WP_HOME', 'http://site.url');
     define('WP_SITEURL', 'http://site.url/app');
     define('WP_CONTENT_URL', 'http://site.url/content');
     define('WP_CONTENT_DIR', dirname(__FILE__) . '/content');
 }
+define('DB_CHARSET', 'utf8');
+define('WP_DEBUG', true);
 
 define('AUTH_KEY', ';8ot2b$Y$(;_+4^![3ka!*rASD987asda8s7D^!@#AS*D&^<%J{upP1y;Sc7-{^eA5!!-~j!W%3#l~F');
 define('SECURE_AUTH_KEY', 'ZN`?>g!`#%IPmR.pwW(SDFG&(ASD*F&(*as9d87a9sDA(AS*d7ASD*(7)-0*jDMvt%{3pQ e+8`;-M^;');

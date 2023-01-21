@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* Theme's main frontend file */
+
+/* Theme proprietary files */
+
+/* Global */
+@import 'global/site-header';
+@import 'global/site-footer';
+
+/* Modules */
+@import 'modules/map';
+
+/* Components */
+@import 'components/buttons';
+@import 'components/links';

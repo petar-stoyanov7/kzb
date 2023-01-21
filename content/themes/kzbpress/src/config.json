@@ -1,0 +1,10 @@
+{
+	"version": 1,
+	"settings": {
+		"browserSync": {
+			"host": "localhost",
+			"proxy": "http://kzb.com",
+			"port": 3000
+		}
+	}
+}
