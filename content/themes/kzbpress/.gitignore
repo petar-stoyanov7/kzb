@@ -10,3 +10,4 @@ packaged/
 wpcs/
 vendor/
 library/blocks/build
+package-lock.json

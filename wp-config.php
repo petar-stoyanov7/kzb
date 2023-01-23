@@ -1,11 +1,12 @@
 <?php
 
+define('APP_ROOT', dirname(__DIR__));
+define('APP_ENV', getenv('APPLICATION_ENV'));
+
 $table_prefix = 'kzb_';
 if (file_exists(dirname(__FILE__) . '/wp-config-local.php')) {
     require_once dirname(__FILE__) . '/wp-config-local.php';
 } else {
-    define('APP_ROOT', dirname(__DIR__));
-    define('APP_ENV', getenv('APPLICATION_ENV'));
 
     define('DB_NAME', 'name_goes_here');
     define('DB_USER', 'name_goes_here');
