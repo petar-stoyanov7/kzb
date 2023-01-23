@@ -1,0 +1,107 @@
+{
+  "version": 2,
+  "settings": {
+    "appearanceTools": true,
+    "devLabel": false,
+    "layout": {
+      "contentSize": "1200px",
+      "wideSize": "1600px"
+    },
+    "color": {
+      "defaultPalette": false,
+      "defaultGradients": false,
+      "palette": [
+        {
+          "slug": "primary",
+          "color": "#1779ba",
+          "name": "Primary"
+        },
+        {
+          "slug": "secondary",
+          "color": "#767676",
+          "name": "Secondary"
+        },
+        {
+          "slug": "success",
+          "color": "#3adb76",
+          "name": "Success"
+        },
+        {
+          "slug": "warning",
+          "color": "#ffae00",
+          "name": "Warning"
+        },
+        {
+          "slug": "alert",
+          "color": "#cc4b37",
+          "name": "Alert"
+        },
+        {
+          "slug": "black",
+          "color": "#000000",
+          "name": "Black"
+        },
+        {
+          "slug": "white",
+          "color": "#ffffff",
+          "name": "White"
+        }
+      ]
+    },
+    "typography": {
+      "fontSizes": [
+        {
+          "slug": "headingone",
+          "size": "48px",
+          "name": "~H1"
+        },
+        {
+          "slug": "headingtwo",
+          "size": "40px",
+          "name": "~H2"
+        },
+        {
+          "slug": "headingthree",
+          "size": "31px",
+          "name": "~H3"
+        },
+        {
+          "slug": "headingfour",
+          "size": "25px",
+          "name": "~H4"
+        },
+        {
+          "slug": "headingfive",
+          "size": "20px",
+          "name": "~H5"
+        },
+        {
+          "slug": "headingsix",
+          "size": "16px",
+          "name": "~H6"
+        }
+      ]
+    },
+    "settings": {
+      "spacing": {
+        "margin": false,
+        "padding": false,
+        "blockGap": true
+      }
+    },
+    "styles": {
+      "spacing": {
+        "blockGap": "30px"
+      }
+    },
+    "gutenberg": {
+      "blocks": {
+        "path": "lib/blocks",
+        "autoload": [
+          "build/map"
+        ],
+        "dynamic_blocks": {}
+      }
+    }
+  }
+}

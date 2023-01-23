@@ -1,8 +1,8 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
-	"name": "kzb/map",
-	"title": "Kapachki Map",
+	"name": "kzbpress/points-map",
+	"title": "Points Map",
 	"version": "0.0.1",
 	"category": "text",
 	"parent": [],
@@ -11,7 +11,7 @@
 	"keywords": [
 		"map",
 		"kapachki",
-		"punkt"
+		"point"
 	],
 	"attributes": {},
 	"textdomain": "kzbpress",

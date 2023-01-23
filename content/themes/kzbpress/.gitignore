@@ -9,5 +9,6 @@ dist
 packaged/
 wpcs/
 vendor/
+lib/blocks/build
 library/blocks/build
 package-lock.json
