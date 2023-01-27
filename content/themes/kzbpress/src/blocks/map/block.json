@@ -4,10 +4,10 @@
 	"name": "kzbpress/points-map",
 	"title": "Points Map",
 	"version": "0.0.1",
-	"category": "text",
+	"category": "theme",
 	"parent": [],
 	"icon": "location-alt",
-	"description": "",
+	"description": "A map for all or some points",
 	"keywords": [
 		"map",
 		"kapachki",

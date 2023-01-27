@@ -22,5 +22,17 @@
 <body <?php body_class(); ?>>
 
 <header class="kzb-header" role="banner">
-    <?php //TODO: Add header navigation ?>
+    <div class="kzb-header__desktop">
+        <?php kzb_desktop_nav(); ?>
+    </div>
+    <div class="kzb-header__mobile">
+        <div class="kzb-header__mobile-container">
+            <div class="mobile-menu">
+                <a href="#" class="mobile-menu__activator" id="mobile-activator"></a>
+                <div class="mobile-menu__menu" id="menu-container">
+                    <?php kzb_mobile_nav(); ?>
+                </div>
+            </div>
+        </div>
+    </div>
 </header>

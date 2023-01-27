@@ -4,6 +4,7 @@
 /* Theme proprietary files */
 
 /* Global */
+@import 'global/inlined-images';
 @import 'global/site-header';
 @import 'global/site-footer';
 
@@ -13,3 +14,25 @@
 /* Components */
 @import 'components/buttons';
 @import 'components/links';
+
+//TODO: Remove this sample css later
+body {
+	background-color: #f1f1f1;
+}
+
+.kzb-content {
+	width: 100%;
+
+	.kzb-entry {
+		background-color: #fff;
+		margin: 0 auto;
+		padding: 10px;
+
+		@media screen and (min-width: 1200px) {
+			max-width: 1200px;
+		}
+		@media screen and (min-width: 1440px) {
+			max-width: 1440px;
+		}
+	}
+}

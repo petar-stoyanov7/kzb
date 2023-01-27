@@ -8,7 +8,7 @@
 ?>
 
 <footer class="kzb-footer">
-    <?php //TODO: Add actual footer content ?>
+    This will one day contain the site's footer.
 </footer>
 
 <?php wp_footer(); ?>
