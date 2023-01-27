@@ -56,3 +56,17 @@ Or if you want to build it to be production ready:
 ```shell
 npm run build
 ```
+
+## Project Layout
+### Scripts
+All JS are located in `content/themes/kzbpress/src/theme/js` - if you plan on adding additional JS functionality - 
+please add it in the `lib` subdirectory and import it in app.js. You can use the current script as an example
+
+### Styles
+All CSS (Sass) stylesheets are located in `content/themes/kzbpress/src/theme/scss`. Just as with JS - please add new 
+files (or add to the existing ones) in the subdirectories there.
+
+### Gutenberg Blocks
+The gutenberg blocks reside in `content/themes/kzbpress/src/blocks` - if you want to add a new block - please create 
+a new directory and follow Gutenberg's block.json 
+[recommended layout](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/).
