@@ -25,3 +25,6 @@ require_once 'lib/theme-support.php';
 
 /** Custom theme Gutenberg blocks */
 require_once 'lib/blocks/index.php';
+
+/** Create Locations !Important - comment when locations are populated! */
+//require_once 'lib/municipalities/municipalities.php';
