@@ -2,7 +2,7 @@
 /**
  * Register custom taxonomies here
  */
-function kzb_locations() {
+function locations_tax() {
 
     $labels = array(
         'name'                       => _x( 'Локации', 'Taxonomy General Name', 'kzbpress' ),
@@ -39,4 +39,4 @@ function kzb_locations() {
     register_taxonomy( 'point_locations', array( 'points' ), $args );
 
 }
-add_action('init', 'kzb_locations', 0);
+add_action('init', 'locations_tax', 0);

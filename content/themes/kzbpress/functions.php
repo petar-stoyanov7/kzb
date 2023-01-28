@@ -14,11 +14,9 @@ require_once 'lib/nav.php';
 /** Scripts */
 require_once 'lib/enqueue-scripts.php';
 
-/** Custom Post Types */
-require_once 'lib/add-cpt.php';
-
-/** Custom Taxonomies */
-require_once 'lib/add-tax.php';
+/** Custom Post Types and taxonomies */
+require_once 'lib/cpt/add-cpt.php';
+require_once 'lib/cpt/add-tax.php';
 
 /** Theme Support */
 require_once 'lib/theme-support.php';
@@ -27,4 +25,4 @@ require_once 'lib/theme-support.php';
 require_once 'lib/blocks/index.php';
 
 /** Create Locations !Important - comment when locations are populated! */
-//require_once 'lib/municipalities/municipalities.php';
+//require_once 'lib/locations/add-municipalities.php';
