@@ -1,0 +1,188 @@
+{
+    "key": "group_63d76ad8b52be",
+    "title": "Point Fields",
+    "fields": [
+        {
+            "key": "field_63d76ad8d213c",
+            "label": "Адрес",
+            "name": "point-address",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Адресът, на който се намира пункта",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "Въведете адрес тук",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_63d76b08d213d",
+            "label": "Телефон",
+            "name": "point-phone",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Телефонния номер на пункта",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "Въведете номера тук",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_63d76b2ed213e",
+            "label": "Email",
+            "name": "point-email",
+            "aria-label": "",
+            "type": "email",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_63d76b5bd213f",
+            "label": "Географска Ширина",
+            "name": "point-lat",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Полето би трябвало да се попълни автоматично. \r\nНЕ ПРОМЕНЯЙ НИЩО, АКО НЕ СИ СИГУРЕН(А)!!!",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_63d76ba8d2140",
+            "label": "Географкса Дължина",
+            "name": "point-lon",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Полето би трябвало да се попълни автоматично. \r\nНЕ ПРОМЕНЯЙ НИЩО, АКО НЕ СИ СИГУРЕН(А)!!!",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_63d76bc8d2141",
+            "label": "Лице за контакт",
+            "name": "point-contact",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Към кого да се обърнат за този пункт",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_63d76becd2142",
+            "label": "Работно Време",
+            "name": "работно_време",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Времевия интервал, в който пункта ще работи",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_63d76c3bd2143",
+            "label": "Брой оплаквания",
+            "name": "point-reports-number",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Това поле зависи от формата за оплаквания. Променяйте тази стойност само ако знаете какво правите!",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "points"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1675062383
+}
