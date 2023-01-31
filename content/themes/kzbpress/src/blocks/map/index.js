@@ -1,6 +1,8 @@
 import { registerBlockType } from "@wordpress/blocks";
 
 import metadata from './block.json';
+import edit from './edit';
+import save from './save'
 
 const {
 	name,
@@ -9,6 +11,7 @@ const {
 	icon,
 	supports
 } = metadata;
+console.log('meme', metadata);
 
 registerBlockType(
 	name,
@@ -17,16 +20,7 @@ registerBlockType(
 		icon,
 		attributes,
 		supports,
-		edit: (props) => {
-			console.log('pr', props);
-			return (
-				<div className="map">
-					<h1>Here we go</h1>
-				</div>
-			)
-		},
-		save: (props) => {
-			console.log('pr s', props);
-		}
+		edit: edit,
+		save: save,
 	},
 )

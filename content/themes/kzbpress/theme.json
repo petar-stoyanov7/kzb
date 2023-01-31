@@ -97,10 +97,13 @@
     "gutenberg": {
       "blocks": {
         "path": "lib/blocks",
-        "autoload": [
-          "build/map"
-        ],
-        "dynamic_blocks": {}
+        "autoload": [],
+        "dynamic_blocks": {
+          "build/map": {
+            "include_php": true,
+            "callback": "kzb_map"
+          }
+        }
       }
     }
   }

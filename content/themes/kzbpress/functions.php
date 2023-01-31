@@ -8,6 +8,9 @@
 
 define('THEME_JSON', json_decode(file_get_contents(__DIR__ . "/theme.json"), true));
 
+/** Helpers */
+require_once 'lib/helpers.php';
+
 /** Navigation */
 require_once 'lib/nav.php';
 
@@ -26,7 +29,6 @@ require_once 'lib/blocks/index.php';
 
 /** Create Locations !Important - comment when locations are populated! */
 //require_once 'lib/locations/add-municipalities.php';
-
 
 /** ACF Local save */
 require_once 'lib/acf/ACFLocal.php';

@@ -3,19 +3,6 @@
  * This file is intended to dynamically add all Bulgarian municipalities and regions
  */
 
-function create_slug(string $word) : string
-{
-    $word = mb_strtolower($word);
-    $cyr = [
-        ' ', 'ж',  'ч',  'щ',   'ш',  'ю',  'а', 'б', 'в', 'г', 'д', 'е', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ъ', 'ь', 'я',
-    ];
-    $lat = [
-        '-', 'zh', 'ch', 'sht', 'sh', 'yu', 'a', 'b', 'v', 'g', 'd', 'e', 'z', 'i', 'y', 'k', 'l', 'm', 'n', 'o', 'p', 'r', 's', 't', 'u', 'f', 'h', 'c', 'a', 'j', 'ya',
-    ];
-
-    return str_replace($cyr, $lat, $word);
-}
-
 function populate_locations() : void
 {
     $tax = get_terms('point_locations', ['hide_empty' => false]);
@@ -30,7 +17,7 @@ function populate_locations() : void
     $locations = json_decode($locations, true);
 
     foreach ($locations as $province => $municipalities) {
-        $slug = create_slug($province);
+        $slug = transliterate($province);
         $term_array = wp_insert_term(
             $province,
             'point_locations',
@@ -46,7 +33,7 @@ function populate_locations() : void
         $parent_id = $term_array['term_id'];
 
         foreach ($municipalities as $municipality) {
-            $slug = create_slug($municipality);
+            $slug = transliterate($municipality);
             wp_insert_term(
                 $municipality,
                 'point_locations',

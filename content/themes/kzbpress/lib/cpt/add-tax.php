@@ -40,3 +40,16 @@ function locations_tax() {
 
 }
 add_action('init', 'locations_tax', 0);
+
+/* Convert new cities slugs to latin */
+function convert_slug($term, $taxonomy)
+{
+    if ('point_locations' !== $taxonomy) {
+        return $term;
+    }
+
+    $term['slug'] = transliterate($term['name']);
+
+    return $term;
+}
+add_filter('wp_insert_term_data', 'convert_slug', 10, 2);

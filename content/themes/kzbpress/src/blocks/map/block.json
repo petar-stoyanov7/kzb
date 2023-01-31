@@ -5,7 +5,6 @@
 	"title": "Points Map",
 	"version": "0.0.1",
 	"category": "theme",
-	"parent": [],
 	"icon": "location-alt",
 	"description": "A map for all or some points",
 	"keywords": [
