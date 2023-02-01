@@ -1,0 +1,32 @@
+.wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.wrap > .title {
+    width: 100%;
+}
+
+.wrap > .left-pane {
+    width: 50%;
+    margin-right: 10px;
+}
+
+.left-pane > .actions {
+    display: flex;
+    flex-direction: row;
+}
+
+.wrap > .right-pane {
+    width: calc(50% - 10px);
+}
+
+.wrap > .right-pane > .notes > p {
+    font-size: 16px;
+}
+
+span.warning {
+    font-weight: 700;
+    color: red;
+}
