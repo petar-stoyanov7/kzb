@@ -1,0 +1,33 @@
+.wrap .left-pane form label {
+    display: table;
+    background-color: #978bf7;
+    border: 0;
+    padding: 10px 30px;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.wrap .left-pane form label:hover {
+    background-color: #7065cf;
+}
+
+.wrap .left-pane form input {
+    display: none;
+}
+
+.wrap .left-pane form button {
+    background-color: #44ad44;
+    border: 0;
+    padding: 10px 30px;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.wrap .left-pane form button:hover {
+    background-color: #238923;
+}

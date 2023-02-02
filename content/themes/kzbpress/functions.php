@@ -27,8 +27,5 @@ require_once 'lib/theme-support.php';
 /** Custom theme Gutenberg blocks */
 require_once 'lib/blocks/index.php';
 
-/** Create Locations !Important - comment when locations are populated! */
-//require_once 'lib/locations/add-municipalities.php';
-
 /** ACF Local save */
 require_once 'lib/acf/ACFLocal.php';

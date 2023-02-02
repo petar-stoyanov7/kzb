@@ -2,7 +2,7 @@
 /**
  * Configurations helper
  *
- * @since      1.0.0
+ * @since      0.0.1
  *
  * @package    IPM
  * @subpackage IPM/helpers
@@ -126,5 +126,15 @@ class ConfigHelper
             'show_admin_column'             => self::getBoolConfig('ipm_tax_show_admin_column'),
             'show_in_nav_menus'             => self::getBoolConfig('ipm_tax_show_in_nav_menus'),
         ];
+    }
+
+    public static function get_cpt_slug()
+    {
+        return self::getConfig('ipm_cpt_slug');
+    }
+
+    public static function get_tax_slug()
+    {
+        return self::getConfig('ipm_tax_slug');
     }
 }

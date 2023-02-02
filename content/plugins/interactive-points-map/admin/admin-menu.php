@@ -49,6 +49,14 @@ class IPMAdminMenu
             IPM_PLUGIN_SLUG . '-tax-settings',
             [$this, 'display_tax_settings']
         );
+        add_submenu_page(
+            IPM_PLUGIN_SLUG,
+            'Import',
+            'Import Taxonomies',
+            'administrator',
+            IPM_PLUGIN_SLUG . '-import',
+            [$this, 'display_import']
+        );
     }
     
     public function admin_dashboard()
@@ -79,6 +87,11 @@ class IPMAdminMenu
             do_action('admin_notices', $_GET['error_message']);
         }
         require_once __DIR__ . '/partials/tax-page.php';
+    }
+
+    public function display_import()
+    {
+        require_once __DIR__ . '/partials/import-page.php';
     }
     
     public function register_settings()
