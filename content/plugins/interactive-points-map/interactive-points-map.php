@@ -12,10 +12,11 @@
 namespace IPM;
 
 use IPM\Admin\IPMAdminMenu;
+use IPM\Blocks\IPMBlockLoader;
 use IPM\CPT\IPMPostType;
 use IPM\CPT\IPMTaxonomy;
-use IPM\Helpers\RestHelper;
-use IPM\Helpers\ConfigHelper;
+use IPM\Helpers\IPMRestHelper;
+use IPM\Helpers\IPMConfigHelper;
 
 class IPM
 {
@@ -27,10 +28,13 @@ class IPM
     public function __construct()
     {
 
-        require_once __DIR__ . '/helpers/ConfigHelper.php';
-        require_once __DIR__ . '/helpers/RestHelper.php';
+        require_once __DIR__ . '/helpers/IPMHelper.php';
+        require_once __DIR__ . '/helpers/IPMConfigHelper.php';
+        require_once __DIR__ . '/helpers/IPMRestHelper.php';
+        require_once __DIR__ . '/helpers/IPMTaxHelper.php';
         require_once __DIR__ . '/cpt/IPMPostType.php';
         require_once __DIR__ . '/cpt/IPMTaxonomy.php';
+        require_once __DIR__ . '/blocks/IPMBlockLoader.php';
 
         if (is_admin()) {
             require_once __DIR__ . '/admin/admin-menu.php';
@@ -51,18 +55,17 @@ class IPM
             $AdminMenu = new IPMAdminMenu();
         }
 
-
         $CPT = new IPMPostType();
         $Tax = new IPMTaxonomy();
+
+        $BL = new IPMBlockLoader();
+        $RH = new IPMRestHelper();
 
 
 //        $ConfigHelper = new ConfigHelper();
 //        $RestHelper = new RestHelper();
     }
 
-    public function register_cpt()
-    {
-    }
 
     private function ipm_define($name, $value) : void
     {

@@ -1,0 +1,14 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "kzbpress/example",
+	"title": "Example Block",
+	"version": "0.0.1",
+	"category": "theme",
+	"icon": "location-alt",
+	"description": "An example block",
+	"keywords": ["example"],
+	"attributes": {},
+	"textdomain": "kzbpress",
+	"editorScript": "file:./index.js"
+}

@@ -11,11 +11,52 @@
 
 namespace IPM\Helpers;
 
-use IPM\Helpers\ConfigHelper;
+use IPM\Helpers\IPMConfigHelper;
 use IPM\Helpers\IPMHelper;
 
 class IPMTaxHelper
 {
+    private string $tax_name = '';
+
+    public function __construct()
+    {
+        $this->tax_name = self::get_tax_name();
+    }
+
+    public function get_taxonomy_list($parent = 0, $hide_empty = false) : array
+    {
+        $tax_list = [];
+		$terms = get_terms([
+			'parent' => $parent,
+			'taxonomy' => $this->tax_name,
+			'hide_empty' => $hide_empty
+		]);
+        if ((bool)$terms && !is_wp_error($terms)) {
+            foreach ($terms as $term) {
+                $tax_list[] = [
+                    'id' => $term->term_id,
+                    'name' => $term->name,
+                    'slug' => $term->slug,
+                    'parent' => $term->parent
+                ];
+            }
+        }
+
+        return $tax_list;
+    }
+
+    public function get_taxonomy_name() : string
+    {
+        return $this->tax_name;
+    }
+
+    protected static function get_tax_name() : string
+    {
+
+        return IPMConfigHelper::get_tax_slug();
+    }
+
+
     public static function parse_json_file(string $raw_json) : void
     {
         IPMHelper::wp_load();
@@ -25,7 +66,7 @@ class IPMTaxHelper
         }
 
         $locations = json_decode($raw_json, true);
-        $taxonomy = ConfigHelper::get_tax_slug();
+        $taxonomy = self::get_tax_name();
 
         self::parse_array($locations, $taxonomy);
     }

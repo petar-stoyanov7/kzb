@@ -1,0 +1,17 @@
+{
+  "name": "ipm_blocks",
+  "version": "0.0.1",
+  "description": "Collection of Gutenberg blocks to use with IPM plugin",
+  "main": "index.js",
+  "scripts": {
+    "start": "wp-scripts start --webpack-src-dir=src/ --webpack-copy-php --output-path=build/",
+    "build": "wp-scripts build --webpack-src-dir=src/ --webpack-copy-php --output-path=build/",
+    "run": "wp-scripts run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@wordpress/scripts": "25.3.0"
+  }
+}

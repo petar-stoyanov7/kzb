@@ -11,14 +11,14 @@
 
 namespace IPM\CPT;
 
-use IPM\Helpers\ConfigHelper;
+use IPM\Helpers\IPMConfigHelper;
 use IPM\Helpers\IPMHelper;
 
 class IPMTaxonomy
 {
     public function __construct()
     {
-        $cfg = ConfigHelper::getTaxSettings();
+        $cfg = IPMConfigHelper::getTaxSettings();
         if (!$cfg) {
             return;
         }

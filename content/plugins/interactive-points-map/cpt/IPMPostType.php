@@ -11,7 +11,7 @@
 
 namespace IPM\CPT;
 
-use IPM\Helpers\ConfigHelper;
+use IPM\Helpers\IPMConfigHelper;
 
 class IPMPostType
 {
@@ -20,7 +20,7 @@ class IPMPostType
 
     public function __construct()
     {
-        $cfg = ConfigHelper::getCptSettings();
+        $cfg = IPMConfigHelper::getCptSettings();
         if (!$cfg) {
             return;
         }

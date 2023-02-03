@@ -1,18 +1,19 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
-	"name": "kzbpress/points-map",
-	"title": "Points Map",
+	"name": "ipm/filter-points-map",
+	"title": "Points Map with Filter",
 	"version": "0.0.1",
 	"category": "theme",
 	"icon": "location-alt",
 	"description": "A map for all or some points",
 	"keywords": [
 		"map",
-		"kapachki",
-		"point"
+		"point",
+		"points",
+		"filter"
 	],
 	"attributes": {},
-	"textdomain": "kzbpress",
+	"textdomain": "ipm",
 	"editorScript": "file:./index.js"
 }

@@ -1,6 +1,4 @@
 <?php
-require_once __DIR__ . '/Helpers/MapAjaxHelper.php';
-$Helper = new MapAjaxHelper();
 
 function register_map_block()
 {

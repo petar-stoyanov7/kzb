@@ -1,8 +1,6 @@
 import { registerBlockType } from "@wordpress/blocks";
 
 import metadata from './block.json';
-import edit from './edit';
-import save from './save'
 
 const {
 	name,
@@ -20,7 +18,11 @@ registerBlockType(
 		icon,
 		attributes,
 		supports,
-		edit: edit,
-		save: save,
+		edit: () => {
+			return 'This is a example block'
+		},
+		save: () => {
+			return 'This is an example block'
+		},
 	},
 )
