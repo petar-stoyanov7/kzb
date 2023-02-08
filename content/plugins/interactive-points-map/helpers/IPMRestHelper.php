@@ -38,11 +38,32 @@ class IPMRestHelper
                 'permission_callback' => '__return_true'
             ]
         );
+        register_rest_route(
+            'ipm/v1',
+            '/maps/get-filtered-locations',
+            [
+                'methods' => 'POST',
+                'callback' => [$this, 'get_filtered_locations'],
+                'permission_callback' => '__return_true'
+            ]
+        );
     }
 
-    public function get_locations() : WP_REST_Response
+    public function get_locations($local = false)
     {
         $locations = $this->TaxHelper->get_taxonomy_list();
+
+        if ($local) {
+            return $locations;
+        }
+
+        return new WP_REST_Response($locations, 200);
+    }
+
+    public function get_filtered_locations() : WP_REST_Response
+    {
+        $locations = $this->get_locations(true);
+        $locations = IPMHelper::filter_locations($locations);
 
         return new WP_REST_Response($locations, 200);
     }

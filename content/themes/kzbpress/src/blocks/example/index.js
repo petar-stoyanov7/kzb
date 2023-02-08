@@ -9,7 +9,6 @@ const {
 	icon,
 	supports
 } = metadata;
-console.log('meme', metadata);
 
 registerBlockType(
 	name,

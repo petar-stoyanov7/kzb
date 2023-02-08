@@ -16,19 +16,18 @@ use IPM\Helpers\IPMHelper;
 
 class IPMTaxHelper
 {
-    private string $tax_name = '';
+    private string $tax_slug = '';
 
     public function __construct()
     {
-        $this->tax_name = self::get_tax_name();
+        $this->tax_slug = self::get_tax_slug();
     }
 
-    public function get_taxonomy_list($parent = 0, $hide_empty = false) : array
+    public function get_taxonomy_list($hide_empty = false) : array
     {
         $tax_list = [];
 		$terms = get_terms([
-			'parent' => $parent,
-			'taxonomy' => $this->tax_name,
+			'taxonomy' => $this->tax_slug,
 			'hide_empty' => $hide_empty
 		]);
         if ((bool)$terms && !is_wp_error($terms)) {
@@ -47,10 +46,10 @@ class IPMTaxHelper
 
     public function get_taxonomy_name() : string
     {
-        return $this->tax_name;
+        return $this->tax_slug;
     }
 
-    protected static function get_tax_name() : string
+    protected static function get_tax_slug() : string
     {
 
         return IPMConfigHelper::get_tax_slug();
@@ -66,7 +65,7 @@ class IPMTaxHelper
         }
 
         $locations = json_decode($raw_json, true);
-        $taxonomy = self::get_tax_name();
+        $taxonomy = self::get_tax_slug();
 
         self::parse_array($locations, $taxonomy);
     }

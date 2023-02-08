@@ -43,12 +43,48 @@ class IPMHelper
         return self::transliterate($word);
     }
 
+    /**
+     * Load WP Functions
+     * @return void
+     */
     public static function wp_load() : void
     {
         $wp_load_file = dirname(__DIR__, 4) . '/app/wp-load.php';
         $loaded_files = get_included_files();
         if (!in_array($wp_load_file, $loaded_files)) {
             require_once $wp_load_file;
+        }
+    }
+
+    public static function filter_locations($locations, $parent_array = [], $result = []) : array
+    {
+        if (0 === count($parent_array) && 0 === count($result)) {
+            /* First Iteration */
+            $filtered_locations = [];
+            $temp_array = [];
+            foreach ($locations as $i => $location) {
+                if (0 === $location['parent'] || empty($location['parent'])) {
+                    $temp_array[] = $location;
+                    unset($locations[$i]);
+                }
+            }
+            $filtered_locations[] = $temp_array;
+            return self::filter_locations($locations, $temp_array, $filtered_locations);
+        } elseif (0 === count($locations)) {
+            /* Last Iteration */
+            return $result;
+        } else {
+            /* Recursive Iteration */
+            $temp_array = [];
+            $parents = array_column($parent_array, 'id');
+            foreach ($locations as $i => $location) {
+                if (in_array($location['parent'], $parents)) {
+                    $temp_array[] = $location;
+                    unset($locations[$i]);
+                }
+            }
+            $result[] = $temp_array;
+            return self::filter_locations($locations, $temp_array, $result);
         }
     }
 }

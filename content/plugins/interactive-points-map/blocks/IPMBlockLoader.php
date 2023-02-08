@@ -10,12 +10,10 @@
 
 namespace IPM\Blocks;
 
-use IPM\Helpers\IPMTaxHelper;
 use IPM\Helpers\IPMConfigHelper;
 
 class IPMBlockLoader
 {
-    private IPMTaxHelper $TaxHelper;
     private IPMConfigHelper $ConfigHelper;
     private const BLOCKS = [
     ];
@@ -25,7 +23,6 @@ class IPMBlockLoader
 
     public function __construct()
     {
-        $this->TaxHelper = new IPMTaxHelper();
         $this->ConfigHelper = new IPMConfigHelper();
 
         add_action('init', [$this,'load_blocks']);
@@ -36,8 +33,6 @@ class IPMBlockLoader
     public function load_blocks()
     {
         $api_key = $this->ConfigHelper->get_api_key();
-        $taxonomy_name = $this->TaxHelper->get_taxonomy_name();
-        $taxonomy_list = $this->TaxHelper->get_taxonomy_list();
 
         foreach (self::BLOCKS as $block) {
             register_block_type(__DIR__ . "/build/{$block}");
